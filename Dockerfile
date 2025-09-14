@@ -14,6 +14,9 @@ EXPOSE 3000
 #RUN addgroup dev && adduser -S -G david dev
 #USER david
 
+
+#->  S.2 -> Criando imagens docker
+
 #docker run -dp 3000:3000 app -> Roda em background -d, e mapeia a porta 3000 do pc local para a porta 3000 do container
 #docker image ls
 #docker ps -> Lista containers
@@ -30,3 +33,12 @@ EXPOSE 3000
 #docker image save -o appv2.tar app:v2 -> salvar uma imagem em um arquivo, geralmente compactado
 #docker image load -i appv2.tar -> Carregar imagem de um arquivo, geralmente .TAR
 
+
+#S.5 -> Containers
+#docker run -d --name manga davaosantos123/app:v2 -> Rodar container a partir de uma imagem, com um nome para o container
+#tag -d -> Rodar em background
+#docker prune, remove containers inativos, caso coloque images, remove imagens inativas
+#docker logs -f 7b6822a6d2da -> Logs de um container id -> docker logs [OPTIONS] CONTAINER
+#docker run -d -p 80:3000 --name teste davaosantos123/app:v1 -> -p para mapeamento de porta
+#docker exec banana ls -> Exec roda comandos dentro do container, Banana -> Nome do container
+#docker start banana -> starta container já criado / docker run -> cria container/ docker stop banana -> stopa container ja criado
