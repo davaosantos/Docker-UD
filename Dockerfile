@@ -40,5 +40,8 @@ EXPOSE 3000
 #docker prune, remove containers inativos, caso coloque images, remove imagens inativas
 #docker logs -f 7b6822a6d2da -> Logs de um container id -> docker logs [OPTIONS] CONTAINER
 #docker run -d -p 80:3000 --name teste davaosantos123/app:v1 -> -p para mapeamento de porta
-#docker exec banana ls -> Exec roda comandos dentro do container, Banana -> Nome do container
+#docker exec banana ls -> Exec roda comandos dentro do container, Banana -> Nome do container , -IT -> exec em modo interativo docker exec -it pera2 sh
+#docker run -d -p:3000:3000 --name pera -v app-dados:/app/dados davaosantos123/app:v2 -> Rodando container com VOLUME associado(ATTACHED)
 #docker start banana -> starta container já criado / docker run -> cria container/ docker stop banana -> stopa container ja criado
+#docker cp david.txt pera2:/app  -> Origem e Destino, nesse caso, do host para o container
+
